@@ -1,0 +1,23 @@
+package ba.BITCamp.Mladen.MojPaket;
+
+public class Area {
+
+	public static void main(String[] args) {
+		int a=2;
+		int b=3;
+		int r=5;
+		double pi=3.14;
+		int P=a*b;
+		int O=2*(a+b);
+		double Pk=(double)(r*r*pi);
+		double Ok=(double)(2*r*pi);
+		
+		
+		System.out.println("Povrsina je:"+P);
+		System.out.println("Obim je:"+O);
+		System.out.println("Povrsina kruga je: "+Pk);
+		System.out.println("Obim kruga je: "+Ok);
+
+	}
+
+}

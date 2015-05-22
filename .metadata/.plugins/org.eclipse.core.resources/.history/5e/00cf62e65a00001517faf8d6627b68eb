@@ -1,0 +1,17 @@
+package ba.BITCamp.Mladen.MojPaket;
+
+public class Vjezbe {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		int br1=128;
+		byte br2=(byte)br1;
+        	
+		
+		
+		System.out.println(br2);
+	}
+
+}

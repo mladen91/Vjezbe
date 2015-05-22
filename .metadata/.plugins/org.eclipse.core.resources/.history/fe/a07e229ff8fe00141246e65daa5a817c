@@ -1,0 +1,17 @@
+package ba.BITCamp.Mladen.MojPaket;
+
+public class MojaKlasa {
+
+	public static void main(String[] args) {
+
+		int voltage=220;
+		int resistance=2000;
+		
+		
+		double str=(double)voltage/resistance;
+		
+		System.out.printf("I:%.3f",str);
+		
+	}
+
+}

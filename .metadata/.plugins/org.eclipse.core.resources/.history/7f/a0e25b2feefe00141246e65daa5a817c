@@ -1,0 +1,19 @@
+package ba.BITCamp.Mladen.MojPaket;
+
+public class MojaKlasa {
+
+	public static void main(String[] args) {
+
+		int zad1=1;
+		int zad2=0;
+		int zad3=1;
+		
+		
+		double konacno = (double)((zad1 * 100) + (zad2 * 100) + (zad3 * 100)) / 3;
+		
+		
+		System.out.println(konacno+" %");
+		
+	}
+
+}

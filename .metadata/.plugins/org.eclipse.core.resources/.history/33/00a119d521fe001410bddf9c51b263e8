@@ -1,0 +1,21 @@
+public class Klasa1 {
+
+	public static void main(String[] args) {
+		int a=1;
+		
+		if (a>1)
+		{
+			System.out.println("Mladjo");
+		}
+		else 
+		{
+			System.out.println("Broj je manji od 2");
+		}
+		
+		
+		
+		
+
+	}
+
+}

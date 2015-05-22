@@ -1,0 +1,19 @@
+package ba.BITCamp.Mladen.MojPaket;
+
+public class MojaKlasa {
+
+	public static void main(String[] args) {
+
+		int h=5;
+		int R=6;
+		double pi=3.14;
+		double P=(2*R*R*pi)+(2*R*pi*h);
+		double V=R*R*pi*h;
+		
+		
+		
+		System.out.println("Povrsina valjka iznosi:"+P);
+		System.out.println("Zapremina valjka iznosi:"+V);
+	}
+
+}

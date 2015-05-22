@@ -1,0 +1,27 @@
+
+
+public class IsPositive {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		String brojstr=args[0]  ;
+		int br= Integer.parseInt(brojstr);		
+		boolean pozitivan = br>=0;
+		*/
+		
+		
+		int br=50;
+		boolean range = (br>=0 && br<=100);
+		
+		
+			System.out.println(range);	
+		
+        	
+		
+		
+		
+	}
+
+}

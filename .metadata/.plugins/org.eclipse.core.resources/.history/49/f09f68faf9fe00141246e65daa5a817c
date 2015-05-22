@@ -1,0 +1,19 @@
+package ba.BITCamp.Mladen.MojPaket;
+
+public class MojaKlasa {
+
+	public static void main(String[] args) {
+
+		int voltage=220;
+		int resistance=1200;
+		
+		
+		double str=voltage/resistance;
+		boolean a = str>0.1;
+		
+		System.out.printf("I:%.3f\n",str);
+		System.out.println("Moze se prezivjeti? "+a);
+		
+	}
+
+}

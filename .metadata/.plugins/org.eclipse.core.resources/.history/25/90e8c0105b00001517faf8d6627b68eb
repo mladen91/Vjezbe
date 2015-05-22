@@ -1,0 +1,27 @@
+package ba.BITCamp.Mladen.MojPaket;
+
+public class Vjezbe {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		int br1=5;
+		boolean pozitivan = true;
+		
+		
+		if (br1>=0) {
+			System.out.println("Broj je pozitivan"+br1);	
+		}
+		else if (br1<0) {
+			
+			System.out.println("Broj je negativan"+br1);
+			
+		}
+        	
+		
+		
+		
+	}
+
+}
