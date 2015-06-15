@@ -15,7 +15,6 @@ INDEX VERSION 1.127+/Users/mladen.teofilovic/Documents/workspace/.metadata/.plug
 1987433045.index
 937585976.index
 3496459214.index
-872600979.index
 4211565152.index
 3717477224.index
 3733047309.index
