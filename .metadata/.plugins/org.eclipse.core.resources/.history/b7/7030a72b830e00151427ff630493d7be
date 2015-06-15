@@ -1,0 +1,19 @@
+
+public class ProbniMain {
+
+	public static void main(String[] args) {
+		
+
+		TextIO.readFile("src/Currency.txt");
+		System.out.println("Ponudjene valute za konverziju:");
+		while (!TextIO.eof()) {
+			String s= TextIO.getln();
+			String[] parts = s.split(" ");
+			String part1 = parts[0];
+			
+		System.out.println(part1);
+		}
+
+	}
+
+}

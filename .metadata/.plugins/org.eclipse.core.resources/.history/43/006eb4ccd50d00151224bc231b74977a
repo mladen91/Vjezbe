@@ -1,0 +1,24 @@
+package ba.Vjezbe;
+
+import java.awt.Font;
+
+public class Task2 {
+
+	public static void printFontDetails(Font f) {
+	
+		f.getSize();
+		f.getName();
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Font f=new Font("Times New Roman", Font.BOLD,18);
+		printFontDetails(f);
+
+		
+	}
+
+}

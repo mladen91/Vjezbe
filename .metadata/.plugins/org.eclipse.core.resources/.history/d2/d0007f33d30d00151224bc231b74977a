@@ -1,0 +1,22 @@
+package ba.Vjezbe;
+
+public class Task1 {
+
+
+	public static double getAreaOfSquare(double a) {
+		
+		return a*a;
+	}
+	
+	
+	public static void main(String[] args) {
+		try {
+		System.out.println(getAreaOfSquare(a));
+		}catch (IllegalArgumentException ex) {
+			System.out.println("Wrong number format.");
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package ba.predavanja;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+
+		String[] person1= {"Tarik","Celik","1986", "Jadranska 10", "4950BD"};
+		String[] person2= {"Mladen","Teofilovic","1991", "Feriza Merzuka 4", "10BND04"};
+
+		Test.getOlderPerson(person1, person2);
+	}
+
+}

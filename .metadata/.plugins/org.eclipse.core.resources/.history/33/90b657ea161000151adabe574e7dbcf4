@@ -1,0 +1,21 @@
+package ba.predavanja;
+
+import java.io.ObjectInputStream.GetField;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		String[] person1 = { "Tarik", "Celik", "1986", "Jadranska 10", "4950BD" };
+		String[] person2 = { "Mladen", "Teofilovic", "1991",
+				"Feriza Merzuka 4", "10BND04" };
+
+//		Test.getOlderPerson(person1, person2);
+		
+		Person per1=new Person("Tarik", "Celik", 1986, "Jadranska 10", "4950BD", "tarik.celik@gmail.com", 180, true, "grah", "7up");
+		Person per2=new Person("Mladen", "Teofilovic", 1991, "Feriza Merzuka 4", "10BND04", "mladen.teofilovic@bitcamp.ba", 188, true, "Pizza", "7UP");
+	
+//		Test.getOlderPerson(per1, per2);
+	}
+
+}

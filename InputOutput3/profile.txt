@@ -1,0 +1,4 @@
+Name:            Mladen
+Email:           mladen
+Favorite Color:  blue
+Yearly Income:   $125.00

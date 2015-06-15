@@ -1,0 +1,43 @@
+package Vjezbe;
+
+import java.util.Scanner;
+
+public class Task4 {
+
+	public static void Minesweeper() {
+		
+		
+	}
+	
+	public static void insertInto2D(int[][] array) {
+		Scanner in = new Scanner(System.in);
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				
+				array[i][j]=(int)(Math.random()*3);
+				System.out.print(array[i][j] + " ");
+			}
+			System.out.println();
+		}
+
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner in= new Scanner(System.in);
+		System.out.println("Which level do you want to play");
+		int level=in.nextInt();
+		int[][] matrix=new int[level][level];
+		
+		insertInto2D(matrix);
+		
+		ZagrijavanjeTask1.print2D(matrix, level);
+
+
+	}
+
+}

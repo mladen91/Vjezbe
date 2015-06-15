@@ -1,0 +1,30 @@
+package ba.Vjezbe;
+
+public class Task4 {
+
+	/**
+	 * <h1>Calculating args array sum, using insertion from console.
+	 * 
+	 * @param args
+	 *            - We will get sum using args array.
+	 */
+
+	public static void main(String[] args) {
+
+		
+		System.out.println(getSum(args));
+
+	}
+
+	public static int getSum(String[] a) {
+		int ab = 0;
+		int sum = 0;
+
+		for (int i = 0; i < a.length; i++) {
+			ab = Integer.parseInt(a[i]);
+			sum += ab;
+		}
+		return ab;
+	}
+
+}

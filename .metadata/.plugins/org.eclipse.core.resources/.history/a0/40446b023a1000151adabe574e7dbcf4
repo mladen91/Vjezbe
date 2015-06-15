@@ -1,0 +1,23 @@
+package ba.vjezbe;
+
+public class Task3 {
+	
+	public static void getSelection() {
+		
+		String[] s=new String[21];
+		TextIO.readFile("src/ba/vjezbe/names.in");
+		
+		if (!TextIO.eof()) {
+			for (int i = 0; i < s.length; i++) {
+			 s[i] = TextIO.getln(); 
+			System.out.println(s[i]);	
+			}
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		getSelection();
+	}
+
+}

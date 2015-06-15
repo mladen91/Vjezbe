@@ -1,0 +1,19 @@
+package ba.predavanja;
+
+public class StudentToolBox {
+
+	public static double izracunajProsjek {
+		if (Student.ocjene != null) {
+			int sumaOcjena=0;
+			int polozenoPredmeta=0;
+			for (Ocjena ocjena: student.ocjene) {
+				if (ocjena>5){
+					sumaOcjena += ocjena.ocjena;
+					polozenoPredmeta++;
+				}
+				
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+
+public class ProbniMain {
+
+	public static void main(String[] args) {
+		
+
+		TextIO.readFile("src/Currency.txt");
+		while (!TextIO.eof()) {
+		System.out.println(TextIO.getln());
+		}
+
+	}
+
+}

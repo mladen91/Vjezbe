@@ -1,0 +1,25 @@
+package Vjezbe;
+
+public class ZagrijavanjeTask1 {
+
+	public static void print2D(int[][] array, int column) {
+		
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				System.out.print(array[i][j]+ " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		int[][] array2D=new int[3][3];
+		print2D(array2D, 3);
+		
+		
+
+	}
+
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+
+public class mladenInput2 {
+	public static String inputCurrency2() {
+	TextIO.readFile("src/Currency.txt");
+	System.out.println("Cusrra:");
+	while (!TextIO.eof()) {
+		String s = TextIO.getln();
+		String[] parts = s.split(" ");
+		String part1 = parts[0];
+
+		System.out.println(part1);
+	}
+	TextIO.readStandardInput();
+	System.out.println("To which currency you want to convert: ");
+	Scanner in = new Scanner(System.in);
+	String currency2 = in.nextLine();
+	in.close();
+	return currency2;
+	}
+	
+}

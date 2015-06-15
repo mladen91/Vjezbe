@@ -1,0 +1,22 @@
+package ba.vjezbe;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Singer a1 = new Singer("Dino Merlin", false, 1980, "Pop");
+		System.out.println("Artist name: "+ a1.name);
+		System.out.println("Is it a band: "+a1.isBand);
+		System.out.println("When did he start do sing: "+a1.activationYear);
+		System.out.println("Music genre: "+a1.genre);
+		
+		Song song1 = new Song(a1, "Ruza", 2014, "Pop"); 
+			System.out.println("Artist name: "+ a1.name);
+			System.out.println("Song name: "+song1.songName);
+			System.out.println("Year of release: "+song1.yearOfRelease);
+			System.out.println("Music genre: "+song1.genre);
+		
+
+	}
+
+}

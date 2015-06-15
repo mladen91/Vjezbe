@@ -1,0 +1,12 @@
+package ba.vjezbe;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Singer s1 = new Singer("Dino Merlin", false, 1980, "Pop");
+		System.out.println(s1);
+
+	}
+
+}

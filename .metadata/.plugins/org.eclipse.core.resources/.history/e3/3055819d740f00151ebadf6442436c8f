@@ -1,0 +1,32 @@
+package Vjezbe;
+
+public class Task2 {
+
+	public static void main(String[] args) {
+
+		TextIO.readFile("src/Vjezbe/niz.txt");
+
+		String numAsString = TextIO.getln();
+		String[] parts = numAsString.split(" ");
+		String rows = parts[0];
+		String columns = parts[1];
+		int rowsAsNum = Integer.parseInt(rows);
+		int columnsAsNum = Integer.parseInt(columns);
+		// System.out.println(rows+" "+columns);
+		String[][] num = new String[rowsAsNum][columnsAsNum];
+		
+		for (int i = 0; i < num.length; i++) {
+			for (int j = 0; j < num[i].length; j++) {
+			System.out.println(num);	
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}

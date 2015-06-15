@@ -1,0 +1,58 @@
+package Predavanja;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArrayPitaj {
+
+	public static void print2DArray(int[][] matrix, int column) {
+
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				System.out.print(matrix[i][j] + " ");
+				if (j == column - 1) {
+					System.out.println("\n");
+				}
+			}
+		}
+		System.out.println();
+	}
+	
+	public static int[] getColumn(int[][] array, int column) {
+
+		int[] oneColumn = new int[array.length];
+
+		for (int i = 0; i < array.length; i++) {
+			oneColumn[i] = array[i][column];
+
+		}
+		return oneColumn;
+	}
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+		System.out.println("Insert number of rows:");
+		int rows = in.nextInt();
+		System.out.println("Insert number of columns:");
+		int columns = in.nextInt();
+
+		int[][] matrix = new int[rows][columns];
+
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				System.out.println("Insert element on indexes: [" + i + "] ["
+						+ j + "]");
+				matrix[i][j] = in.nextInt();
+				
+			}
+
+		}
+		print2DArray(matrix, columns);
+		
+		System.out.println(Arrays.toString(getColumn(matrix, columns-1)));
+		
+
+	in.close();}
+
+}

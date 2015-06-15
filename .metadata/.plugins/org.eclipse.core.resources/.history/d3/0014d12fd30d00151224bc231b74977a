@@ -1,0 +1,18 @@
+package ba.Vjezbe;
+
+public class Task1 {
+
+
+	public static double getAreaOfSquare(double a) {
+		
+		return a*a;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println(getAreaOfSquare(5));
+
+	}
+
+}

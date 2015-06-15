@@ -1,0 +1,52 @@
+package Predavanja;
+
+public class Array2D {
+
+	public static void print2DArray (int[][] array) {
+		
+		int[][] newArray =  new int[4][5];
+		
+		for (int i=0;i<newArray.length;i++) {
+			for (int j=0;j<newArray[i].length;j++) {
+				System.out.println((newArray[i][j]+" "));
+			}
+			
+		}
+	}
+	
+//	public static int[] getColumn(int[][] array, int column) {
+//		
+//		int [] oneColumn;
+//		
+//		
+//		for (int i=0;i<array.length;i++) {
+//			 array=new int[i][column];
+//			 oneColumn= new int[i];
+//			for (int j=0;j<array[i].length;j++) {
+//				System.out.println((array[i][j]+" "));
+//			} 
+//			
+//		}
+//		return array1;
+//	}
+	
+//	public static void printArray (int [] array1) {
+//		
+//		for (int i=0;i<array1.length;i++) {
+//			array1[i]=0;
+//		}
+//	}	
+	public static void main(String[] args) {
+		
+		int [][] matrix = new int[4][5];
+		matrix[0][0]=1;
+		matrix[0][1]=2;
+		
+		System.out.println(matrix);
+//	
+		
+		
+
+	}
+
+}
