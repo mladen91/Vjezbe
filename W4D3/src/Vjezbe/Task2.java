@@ -1,5 +1,7 @@
 package Vjezbe;
 
+import ba.vjezbe.TextIO;
+
 public class Task2 {
 
 	public static void main(String[] args) {

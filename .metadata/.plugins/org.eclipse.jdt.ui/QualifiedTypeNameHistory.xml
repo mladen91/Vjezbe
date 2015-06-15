@@ -13,7 +13,6 @@
 <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
-<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
 <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 <fullyQualifiedTypeName name="java.awt.Font"/>
@@ -22,7 +21,13 @@
 <fullyQualifiedTypeName name="ba.bitcamp.dreamteam.DrawWindow"/>
 <fullyQualifiedTypeName name="javax.naming.PartialResultException"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="Vjezbe.ZagrijavanjeTask1"/>
+<fullyQualifiedTypeName name="ba.predavanja.Person"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="ba.vjezbe.TextIO"/>
+<fullyQualifiedTypeName name="ba.vjezbe.Singer"/>
+<fullyQualifiedTypeName name="ba.vjezbe.Song"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="ba.vjezbe.Album"/>
 </qualifiedTypeNameHistroy>
