@@ -1,7 +1,10 @@
 package Vjezbe;
 
+<<<<<<< HEAD
 import ba.vjezbe.TextIO;
 
+=======
+>>>>>>> 934f4b5ce70e1a49bde908ee530e65425e085228
 public class Task2 {
 
 	public static void main(String[] args) {
