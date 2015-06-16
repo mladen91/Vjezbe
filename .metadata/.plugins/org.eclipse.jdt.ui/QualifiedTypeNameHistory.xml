@@ -23,11 +23,14 @@
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="Vjezbe.ZagrijavanjeTask1"/>
 <fullyQualifiedTypeName name="ba.predavanja.Person"/>
-<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="ba.vjezbe.TextIO"/>
 <fullyQualifiedTypeName name="ba.vjezbe.Singer"/>
 <fullyQualifiedTypeName name="ba.vjezbe.Song"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="ba.vjezbe.Album"/>
+<fullyQualifiedTypeName name="ba.bitcamp.vjezbe.Suitcase"/>
+<fullyQualifiedTypeName name="ba.bitcamp.vjezbe.Wallet"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
+<fullyQualifiedTypeName name="ba.bitcamp.vjezbe.CreditCard"/>
 </qualifiedTypeNameHistroy>
