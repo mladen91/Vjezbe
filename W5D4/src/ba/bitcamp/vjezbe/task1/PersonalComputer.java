@@ -4,7 +4,16 @@ public abstract class PersonalComputer {
 
 	private String oS;
 	private int memory;
-	private int prize;
+	private int price;
+	
+	
+
+	public PersonalComputer(String oS, int memory, int prize) {
+		super();
+		this.oS = oS;
+		this.memory = memory;
+		this.price = prize;
+	}
 
 	public String getoS() {
 		return oS;
@@ -23,19 +32,28 @@ public abstract class PersonalComputer {
 	}
 
 	public int getPrize() {
-		return prize;
+		return price;
 	}
 
 	public void setPrize(int prize) {
-		this.prize = prize;
+		this.price = prize;
 	}
-	
-	public String toString(){
-		String s="";
-		s= "Operating system: "+oS;
-		s=s+"\nRAM memory: "+memory;
-		s=s+"\nPrize of computer: "+prize;
+
+	public String toString() {
+		String s = "";
+		s = "Operating system: " + oS;
+		s = s + "\nRAM memory: " + memory;
+		s = s + "\nPrize of computer: " + price;
 		return s;
 	}
+	public void printInformation(){
+		String s = "";
+		
+		s = "Operating system: " + oS;
+		s = s + "\nRAM memory: " + memory;
+		s = s + "\nPrize of computer: " + price;
+		System.out.println(s);
+	} 
+	
 
 }

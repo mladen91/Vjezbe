@@ -5,6 +5,16 @@ public class PocketPC extends PortableComputer {
 	protected boolean supportTouchInterface;
 	protected boolean supportSimCards;
 	protected boolean supportMicroSdCards;
+	
+	public PocketPC(String oS, int memory, int price, double computerWeight,
+			double displaySize, boolean supportWiFi,
+			boolean supportTouchInterface, boolean supportSimCards,
+			boolean supportMicroSdCards) {
+		super(oS, memory, price, computerWeight, displaySize, supportWiFi);
+		this.supportTouchInterface = supportTouchInterface;
+		this.supportSimCards = supportSimCards;
+		this.supportMicroSdCards = supportMicroSdCards;
+	}
 
 	public boolean isSupportTouchInterface() {
 		return supportTouchInterface;
@@ -40,5 +50,13 @@ public class PocketPC extends PortableComputer {
 		s=s+"\nSIM card supported: "+supportSimCards;
 		s=s+"\nMicroSD card supported: "+supportMicroSdCards;
 		return s;
+	}
+	public void printInformation() {
+		String s="";
+		super.printInformation();
+		s= "Support touch interfaces: "+supportTouchInterface;
+		s=s+"\nSIM card supported: "+supportSimCards;
+		s=s+"\nMicroSD card supported: "+supportMicroSdCards;
+		System.out.println(s);
 	}
 }

@@ -5,6 +5,16 @@ public abstract class StationaryComputer extends PersonalComputer {
 	private double processorSpeed;
 	private int psu;
 	private int hdCapacity;
+	
+	
+
+	public StationaryComputer(String oS, int memory, int price,
+			double processorSpeed, int psu, int hdCapacity) {
+		super(oS, memory, price);
+		this.processorSpeed = processorSpeed;
+		this.psu = psu;
+		this.hdCapacity = hdCapacity;
+	}
 
 	public double getProcessorSpeed() {
 		return processorSpeed;
@@ -37,5 +47,13 @@ public abstract class StationaryComputer extends PersonalComputer {
 		s=s+"\nHD capacity: "+hdCapacity;
 		return s;
 	}
+	public void printInformation(){
+		String s="";
+		super.printInformation();
+		s= "Processor speed: "+processorSpeed;
+		s=s+"\nPSU: "+psu;
+		s=s+"\nHD capacity: "+hdCapacity;
+		System.out.println(s);
+	} 
 
 }

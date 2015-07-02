@@ -5,6 +5,16 @@ public class DesktopComputer extends StationaryComputer {
 	protected int freeSpaceForMemory;
 	protected boolean isOverclocked;
 	protected boolean hasOpticalDrive;
+	
+	public DesktopComputer(String oS, int memory, int price,
+			double processorSpeed, int psu, int hdCapacity,
+			int freeSpaceForMemory, boolean isOverclocked,
+			boolean hasOpticalDrive) {
+		super(oS, memory, price, processorSpeed, psu, hdCapacity);
+		this.freeSpaceForMemory = freeSpaceForMemory;
+		this.isOverclocked = isOverclocked;
+		this.hasOpticalDrive = hasOpticalDrive;
+	}
 
 	public int getFreeSpaceForMemory() {
 		return freeSpaceForMemory;
@@ -41,4 +51,12 @@ public class DesktopComputer extends StationaryComputer {
 		s=s+"\nOptical drive: "+hasOpticalDrive;
 		return s;
 	}
+	public void printInformation(){
+		String s="";
+		super.printInformation();
+		s= "How many RAM free slots: "+freeSpaceForMemory;
+		s=s+"\nOverclocked PC: "+isOverclocked;
+		s=s+"\nOptical drive: "+hasOpticalDrive;
+		System.out.println(s);
+	} 
 }

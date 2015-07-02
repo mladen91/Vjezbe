@@ -8,16 +8,9 @@ public class MainComputer {
 
 	public static void main(String[] args) {
 		
-		PersonalComputer dc1 = new DesktopComputer();
+		DesktopComputer dc = new DesktopComputer("Windows", 8, 1100, 4*4.4, 600, 1000, 2, false, true);
 		
-		System.out.println(dc1 instanceof DesktopComputer);
-		
-		DesktopComputer dc1t = (DesktopComputer) dc1;
-		
-		
-		Laptop l1 = new Laptop();
-		System.out.println(dc1);
-		System.out.println(l1);
+		dc.printInformation();
 
 	}
 

@@ -2,13 +2,16 @@ package ba.bitcamp.predavanja;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -22,32 +25,74 @@ public class ColorPicker extends JPanel {
 	private int green;
 	private int blue;
 	private JButton click;
+	private JButton[] colorButton = new JButton[13];
+	JPanel buttonPanel = new JPanel();
+	JPanel sliderPanel = new JPanel();
+	JPanel colorPanel = new JPanel();
+	private static Color[] supportedColors = new Color[] { Color.BLACK,
+			Color.BLUE, Color.CYAN, Color.DARK_GRAY, Color.GRAY, Color.GREEN,
+			Color.LIGHT_GRAY, Color.MAGENTA, Color.ORANGE, Color.PINK,
+			Color.RED, Color.WHITE, Color.YELLOW };
 
 	public ColorPicker(int width, int height) {
 
-		initButton(width, height);
-
+		setLayout(new FlowLayout());
 		int sliderHeigth = (height / 7);
 		Dimension sliderDimension = new Dimension(width - 50, sliderHeigth);
 		JSlider redSlider = new JSlider(0, 255);
-		JLabel redLabel = new JLabel("Red");
-		JLabel greenLabel = new JLabel("Green");
-		JLabel blueLabel = new JLabel("Blue");
+
+		initButton(width, height);
+
+		for (int i = 0; i < supportedColors.length; i++) {
+			colorButton[i] = new JButton("" + i);
+			colorPanel.add(colorButton[i]);
+
+			colorButton[i].setBackground(supportedColors[i]);
+			colorButton[i].setOpaque(true);
+			colorButton[i].setPreferredSize(new Dimension(50, 50));
+			colorButton[i].setBorder(BorderFactory.createRaisedBevelBorder());
+			colorPanel.setLayout(new GridLayout(5, 5));
+
+			final int j = i;
+			colorButton[i].addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+
+					if (e.getSource() == colorButton[j]) {
+						colorButton[j].setBorder(BorderFactory.createLoweredBevelBorder());
+						click.setBackground(supportedColors[j]);
+					}
+
+				}
+			});
+
+		}
 
 		initSlider(redSlider, "red", sliderDimension);
-		add(click);
-		add(redLabel);
-		add(redSlider);
+		add(colorPanel);
+		add(buttonPanel);
+		add(sliderPanel);
+		sliderPanel.setPreferredSize(new Dimension(200, height / 2));
+
+		sliderPanel.setBackground(Color.GREEN);
+		
+		colorPanel.setBackground(Color.BLUE);
+
+		buttonPanel.add(click);
+		sliderPanel.setLayout(new GridLayout(1, 3));
+
+		sliderPanel.add(redSlider);
 
 		JSlider greenSlider = new JSlider(0, 255);
 		initSlider(greenSlider, "green", sliderDimension);
-		add(greenLabel);
-		add(greenSlider);
+
+		sliderPanel.add(greenSlider);
 
 		JSlider blueSlider = new JSlider(0, 255);
 		initSlider(blueSlider, "blue", sliderDimension);
-		add(blueLabel);
-		add(blueSlider);
+
+		sliderPanel.add(blueSlider);
 
 		// labels
 
@@ -60,6 +105,7 @@ public class ColorPicker extends JPanel {
 		slider.setMajorTickSpacing(50);
 		slider.setMinorTickSpacing(25);
 		slider.setPaintTicks(true);
+		slider.setOrientation(JSlider.VERTICAL);
 		slider.addChangeListener(new ChangeListener() {
 
 			@Override
@@ -77,7 +123,7 @@ public class ColorPicker extends JPanel {
 					blue = changed.getValue();
 					break;
 				}
-              updateButton();
+				updateButton();
 			}
 		});
 
