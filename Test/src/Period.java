@@ -1,0 +1,8 @@
+
+public enum Period {
+
+	
+	
+		RENESANCE, NEOCLASSICISM, MODERN, MODERNART, PRAHISTORY
+	
+}
