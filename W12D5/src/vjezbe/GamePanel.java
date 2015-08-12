@@ -9,8 +9,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -19,6 +21,10 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+
+import org.codehaus.jackson.map.ObjectMapper;
+
+import vjezbe.LafoServer.ClientThread;
 
 /**
  * This class contains many methods that will be used in Snake game(Single
@@ -40,7 +46,7 @@ public class GamePanel extends JPanel {
 	private static final int TILESIZE = 10;
 	// Snake arrays for X and Y coordinates
 
-	private ArrayList<Snake> snakes = new ArrayList<>();
+	private static ArrayList<Snake> snakes = new ArrayList<>();
 
 	// Snake size
 	private int size = 3;
@@ -57,6 +63,7 @@ public class GamePanel extends JPanel {
 	private Timer t;
 	private int gameSpeed = 1;
 	private int delay = 50;
+	private static ObjectMapper map = new ObjectMapper(); 
 
 	BufferedWriter bw = null;
 
@@ -99,10 +106,19 @@ public class GamePanel extends JPanel {
 
 		Socket client;
 		try {
+			
 			client = new Socket("localhost", 5555);
 			System.out.println("client connected");
 			bw = new BufferedWriter(new OutputStreamWriter(
 					client.getOutputStream()));
+			ClientThread ct = new ClientThread(client);
+			
+			
+			Thread t = new Thread(ct);
+			t.start();
+			
+			
+			
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -111,6 +127,40 @@ public class GamePanel extends JPanel {
 			e.printStackTrace();
 		}
 
+	}
+	
+	
+	public static class ClientThread implements Runnable {
+
+		private Socket client;
+
+
+		public ClientThread(Socket client) {
+			this.client = client;
+		}
+
+		public void run() {
+			try {
+				// TODO write JSON to output stream
+
+				BufferedReader reader = new BufferedReader(
+						new InputStreamReader(client.getInputStream()));
+
+				BufferedWriter writer = new BufferedWriter(
+						new OutputStreamWriter(client.getOutputStream()));
+
+			//	while (client.isConnected()) {
+					
+					snakes = map
+							.readValue(client.getInputStream(), ArrayList.class);
+
+			//	}
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+
+		}
 	}
 
 	/**
@@ -124,12 +174,24 @@ public class GamePanel extends JPanel {
 
 	}
 
+	/*
+	 * Thread koji stalno cita.
+	 * 
+	 * Ucita listu preko JSONa
+	 *
+	 * Stara lista je jednaka novoj
+	 *
+ 	 * Prodjes kroy listu i koristi drawSnake
+	 * 
+	 * 
+	 */
+	
+	
 	/**
 	 * This method will be used for drawing snake, food, and game panel
 	 * 
 	 * @param g
 	 */
-
 	public void drawSnake(Graphics g, int[] snakeX, int[] snakeY) {
 
 		// Drawing snake
@@ -239,33 +301,26 @@ public class GamePanel extends JPanel {
 			for (int i = size; i > 0; i--) {
 				snakeX[i] = snakeX[(i - 1)];
 				snakeY[i] = snakeY[(i - 1)];
+
 			}
 
 			if (left) {
-				bw.write("left");
-				bw.newLine();
-				bw.flush();
+				
 				snakeX[0] -= TILESIZE;
 			}
 
 			if (right) {
-				bw.write("right");
-				bw.newLine();
-				bw.flush();
+				
 				snakeX[0] += TILESIZE;
 			}
 
 			if (up) {
-				bw.write("up");
-				bw.newLine();
-				bw.flush();
+				
 				snakeY[0] -= TILESIZE;
 			}
 
 			if (down) {
-				bw.write("down");
-				bw.newLine();
-				bw.flush();
+				
 				snakeY[0] += TILESIZE;
 			}
 		} catch (Exception e) {

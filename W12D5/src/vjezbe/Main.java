@@ -1,9 +1,6 @@
 package vjezbe;
 
 import java.awt.BorderLayout;
-import java.io.IOException;
-import java.net.Socket;
-import java.net.UnknownHostException;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,8 +21,9 @@ public class Main extends JFrame {
 		
 	
 		
-		panel.addSnake(new Snake(100,150));
-		panel.addSnake(new Snake(100,100));
+		panel.addSnake(new Snake());
+		panel.addSnake(new Snake());
+		
 		
 		setLayout(new BorderLayout());
 		add(p, BorderLayout.NORTH);

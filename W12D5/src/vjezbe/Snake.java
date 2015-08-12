@@ -4,15 +4,17 @@ public class Snake {
 	private int[] snakeX= new int[1000];
 	private int[] snakeY= new int[1000];
 	private int snakeXstart;
-	private int snakeYstart;
+	private static int snakeYstart = 50;
 	
 	
 	
 	
-	public Snake(int snakeXstart, int snakeYstart){
+	public Snake(){
 		
-		this.snakeX[0]=snakeXstart;
+		this.snakeX[0]=100;
 		this.snakeY[0]=snakeYstart;
+		snakeYstart +=50;
+		
 	}
 
 	public int getSnakeXstart() {
